@@ -127,7 +127,8 @@ mod tests {
 
     #[test]
     fn search_matches_name() {
-        let hits = cache().search("bash");
+        let c = cache();
+        let hits = c.search("bash");
         assert_eq!(hits.len(), 1);
         assert_eq!(hits[0].name, "bash");
     }
